@@ -21,7 +21,7 @@ An educational, gamified coding quiz where real-life tasks become fantasy-style 
 - **Role:** Backend + AI integration, sound/music implementation, question/response logic  
 - **Team:** 5 members (collaborative development)  
 - **Screenshots:**  
-  ![Codezilla Screenshot](../client/src/assets/Images/Codezilla/Codezilla_Game_Map2.png)  
+  ![Codezilla Screenshot](/client/src/assets/Images/Codezilla/Codezilla_Game_Map2.png)  
 - **Links:**  
 	- 🔗 Live App: [placeholder]  
 	- 📂 Repo: [placeholder]  
@@ -36,7 +36,7 @@ A full-stack gym management platform including member check-in via QR codes, cla
 - **Tech Stack:** MERN, JWT Auth, Tailwind, Cypress, GitHub Actions CI/CD, Render  
 - **Role:** Member portal design, QR check-in functionality, backend auth refactor  
 - **Screenshots:**  
-  ![Smart Gym Screenshot](../client/src/assets/Images/SmartGym/SGScr.png)  
+  ![Smart Gym Screenshot](/client/src/assets/Images/SmartGym/SGScr.png)  
 - **Links:**  
 	- 🔗 Live App: [placeholder]  
 	- 📂 Repo: [placeholder]  
@@ -51,7 +51,7 @@ A productivity and event management tool built for a client to streamline task t
 - **Tech Stack:** MERN, Tailwind, Express, Node  
 - **Role:** Sole developer (freelance project)  
 - **Screenshots:**  
-  ![Chaos Coordinator Screenshot](../client/src/assets/Images/ChaosCoordinator/ChaosCoord.png)  
+  ![Chaos Coordinator Screenshot](/client/src/assets/Images/ChaosCoordinator/ChaosCoord.png)  
 - **Links:**  
 	- 🔗 Live App: [placeholder]  
 	- 📂 Repo: [placeholder]  
