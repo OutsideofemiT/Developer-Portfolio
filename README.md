@@ -6,7 +6,7 @@ Currently pursuing:
 - 📜 **SEO & Generative Engine Optimization (GEO) Certification**
 - 📜 **AI for Engineers Certification (DataCamp)**
 
-This portfolio highlights 3 key projects from different stages of my developer journey:  
+This portfolio highlights 4 key projects from different stages of my developer journey:  
 
 ---
 
@@ -34,6 +34,7 @@ An educational, gamified coding quiz where real-life tasks become fantasy-style 
 - **Team:** 5 members (collaborative development)  
 - **Screenshots:**  
   ![Codezilla Screenshot](../client/src/assets/Images/Codezilla/Codezilla_Game_Map2.png)  
+<<<<<<< HEAD
 - **Links:**  
   - 🔗 Live App: [placeholder]  
   - 📂 Repo: [placeholder]  
@@ -124,6 +125,8 @@ An educational, gamified coding quiz where real-life tasks become fantasy-style 
 - **Team:** 5 members (collaborative development)  
 - **Screenshots:**  
   ![Codezilla Screenshot](./assets/Codezilla_Game_Map2.png)  
+=======
+>>>>>>> a0ba8c58d3eaf703d52859e54958d22d80827115
 - **Links:**  
   - 🔗 Live App: [placeholder]  
   - 📂 Repo: [placeholder]  
@@ -138,7 +141,7 @@ A full-stack gym management platform including member check-in via QR codes, cla
 - **Tech Stack:** MERN, JWT Auth, Tailwind, Cypress, GitHub Actions CI/CD, Render  
 - **Role:** Member portal design, QR check-in functionality, backend auth refactor  
 - **Screenshots:**  
-  ![Smart Gym Screenshot](./assets/SGScr.png)  
+  ![Smart Gym Screenshot](../client/src/assets/Images/SmartGym/SGScr.png)  
 - **Links:**  
   - 🔗 Live App: [placeholder]  
   - 📂 Repo: [placeholder]  
@@ -153,12 +156,38 @@ A productivity and event management tool built for a client to streamline task t
 - **Tech Stack:** MERN, Tailwind, Express, Node  
 - **Role:** Sole developer (freelance project)  
 - **Screenshots:**  
-  ![Chaos Coordinator Screenshot](./assets/ChaosCoord.png)  
+  ![Chaos Coordinator Screenshot](../client/src/assets/Images/ChaosCoordinator/ChaosCoord.png)  
 - **Links:**  
   - 🔗 Live App: [placeholder]  
   - 📂 Repo: [placeholder]  
 
 ---
+DevUniverse 🪐
+
+Stack: React, Tailwind, TypeScript (optional: add what else you used)
+Role: Solo Project
+
+A personal developer dashboard inspired by an operating system, built to streamline daily workflows. Features include:
+
+🔹 Quick-access modals triggered by text commands (::todo, ::journal, ::kanban)
+
+🔹 A notepad for lightweight notes and snippets
+
+🔹 Customizable links that open in new tabs
+
+🔹 Blueprint for expanding into a personal "Dev OS"
+
+📌 To-Do (next iterations):
+
+Refine the To-Do modal UI for a smoother user experience
+
+Add additional modals (journal:, kanban:, wireframe:)
+
+Implement a floating Home button for navigation
+
+🔗 Repository
+
+📸 Screenshots: 
 
 ## 🛠️ Skills & Tools
 
