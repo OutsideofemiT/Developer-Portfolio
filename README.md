@@ -6,7 +6,7 @@ Currently pursuing:
 - 📜 **SEO & Generative Engine Optimization (GEO) Certification**
 - 📜 **AI for Engineers Certification (DataCamp)**
 
-This portfolio highlights 3 key projects from different stages of my developer journey:  
+This portfolio highlights 4 key projects from different stages of my developer journey:  
 
 ---
 
@@ -57,6 +57,32 @@ A productivity and event management tool built for a client to streamline task t
   - 📂 Repo: [placeholder]  
 
 ---
+DevUniverse 🪐
+
+Stack: React, Tailwind, TypeScript (optional: add what else you used)
+Role: Solo Project
+
+A personal developer dashboard inspired by an operating system, built to streamline daily workflows. Features include:
+
+🔹 Quick-access modals triggered by text commands (::todo, ::journal, ::kanban)
+
+🔹 A notepad for lightweight notes and snippets
+
+🔹 Customizable links that open in new tabs
+
+🔹 Blueprint for expanding into a personal "Dev OS"
+
+📌 To-Do (next iterations):
+
+Refine the To-Do modal UI for a smoother user experience
+
+Add additional modals (journal:, kanban:, wireframe:)
+
+Implement a floating Home button for navigation
+
+🔗 Repository
+
+📸 Screenshots: 
 
 ## 🛠️ Skills & Tools
 
