@@ -7,7 +7,7 @@ const ProjectsPage: React.FC = () => {
             id: 1,
             title: "Smart Gym",
             description: "A comprehensive MERN stack fitness management platform featuring QR code check-ins, class booking system, member/trainer/admin portals, analytics dashboard, and cafe inventory management.",
-            image: "/assets/Images/SmartGym/SGScr.png",
+            image: "/assets/Images/SmartGym/SGScr1.png",
             technologies: ["React", "Node.js", "MongoDB", "Express.js", "JWT", "Mongoose", "Bcrypt", "CORS", "Nodemailer"],
             githubLink: "https://github.com/OutsideofemiT/Smart-Gym",
             liveLink: "#",

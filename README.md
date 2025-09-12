@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer portfolio built with **React**, **TypeScript**, and **Vite**—designed to showcase real-world development, creative systems, and poetic tech fluency. This is a curated space for exploring Carmen Wheeler’s work across full-stack platforms, modular design, and genre-fluid storytelling.
 
-Currently, two official plugins are available:
+## 🌐 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Coming soon: [vercel-deployment-url](https://your-vercel-url.com)
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Single Page Application (SPA) & Projects Gallery**  
+  Seamless navigation between portfolio overview and detailed project case studies.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Case Study Architecture**  
+  Each featured build includes a breakdown of the challenge, solution, results, role, visuals, and lessons learned—highlighting intentional design and technical ownership.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Responsive Design**  
+  Fully optimized for mobile, tablet, and desktop experiences.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Custom Carousel**  
+  Frameless, floating carousel for showcasing visuals from Smart Gym, Codezilla, and more.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Modular Tech Stack**  
+  Built with React, TypeScript, Tailwind CSS, and Vite for speed, scalability, and clarity.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Project Links**  
+  Each card includes direct access to live demos and source code (where applicable).
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tech Stack
+
+- **Frontend:** React, TypeScript, Tailwind CSS  
+- **Build Tool:** Vite  
+- **UI Libraries:** Custom components, Flowbite (carousel)  
+- **Deployment:** Vercel (pending)
+
+## 📁 Folder Structure
+/public /assets /Images /SmartGym /Codezilla /ChaosCoordinator /DevUniverse /src /components NavBar.tsx Footer.tsx Projects.tsx AboutMe.tsx Skills.tsx Experience.tsx Contact.tsx /pages Home.tsx ProjectsPage.tsx App.tsx main.tsx README.md
+
+## ✨ Customization Notes
+
+This portfolio is intentionally personal and not intended for cloning. However, if you're exploring modular design or poetic tech storytelling, feel free to draw inspiration from the structure and flow.
+
+- **Project Content:**  
+  Update `/src/components/Projects.tsx` and `/public/assets/Images` to reflect your own builds.
+
+- **About Me, Skills, Experience:**  
+  Modify the respective components to align with your journey.
+
+- **Styling & Theme:**  
+  Tailwind config and component classes are fully customizable.
+
+## 📸 Screenshots
+/public/assets/Images/screenshots/Port1.png
+/public/assets/Images/screenshots/Port2.png
+/public/assets/Images/screenshots/Port3.png
+/public/assets/Images/screenshots/Port4.png
+/public/assets/Images/screenshots/Port5.png
+
+
+
+
+
+
+
+---
+
+**Crafted with intention by Carmen Wheeler**  
+Emerging full-stack developer, brand strategist, and digital artist  
+Architect of Smart Gym, Codezilla, and Temple of the Modern Mystic
