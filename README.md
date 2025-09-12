@@ -4,7 +4,7 @@ A modern, responsive developer portfolio built with **React**, **TypeScript**, a
 
 ## 🌐 Live Site
 
-> Coming soon: [vercel-deployment-url](https://carmenwheelerportfolio.vercel.app/)
+> Coming soon: (https://carmenwheelerportfolio.vercel.app/)
 
 ## 🚀 Features
 
