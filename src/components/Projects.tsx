@@ -56,6 +56,8 @@ const Projects: React.FC = () => {
 			<div className="max-w-6xl mx-auto">
 				{/* Project Title & Subtitle */}
 				<div className="text-center mb-10">
+					<h1 className="text-5xl text-transparent bg-clip-text bg-gradient-to-r to-plum from-whitesmoke opacity-100">FEATURED PROJECT</h1>
+					<br></br>
 					<h2 className="text-5xl font-extrabold mb-2 text-lime tracking-tight">Smart Gym</h2>
 					<p className="text-xl text-whitesmoke font-semibold mb-2">Smarter Fitness. Wherever You Are.</p>
 					<span className="inline-block bg-gray/20 text-limeacc font-semibold px-4 py-1 rounded-full text-sm mb-2">
