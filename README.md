@@ -1,6 +1,6 @@
-# Developer Portfolio
+# Developer Portfolio (WIP)
 
-A modern, responsive developer portfolio built with **React**, **TypeScript**, and **Vite**—designed to showcase real-world development, creative systems, and poetic tech fluency. This is a curated space for exploring Carmen Wheeler’s work across full-stack platforms, modular design, and genre-fluid storytelling.
+A modern, responsive developer portfolio built with **React**, **TypeScript**, and **Vite**—designed to showcase real-world development, creative systems, and poetic tech fluency. This is a curated space for exploring my work across full-stack platforms, modular design, and genre-fluid storytelling.
 
 ## 🌐 Live Site
 
