@@ -50,11 +50,11 @@ This portfolio is intentionally personal and not intended for cloning. However, 
   Tailwind config and component classes are fully customizable.
 
 ## 📸 Screenshots
-![Portfolio Screenshot 1](./public/assets/Images/screenshots/Port1.png)
-![Portfolio Screenshot 2](./public/assets/Images/screenshots/Port2.png)
-![Portfolio Screenshot 3](./public/assets/Images/screenshots/Port3.png)
-![Portfolio Screenshot 4](./public/assets/Images/screenshots/Port4.png)
-![Portfolio Screenshot 5](./public/assets/Images/screenshots/Port5.png)
+![Portfolio Screenshot 1](./public/assets/Images/Screenshots/Port1.png)
+![Portfolio Screenshot 2](./public/assets/Images/Screenshots/Port2.png)
+![Portfolio Screenshot 3](./public/assets/Images/Screenshots/Port3.png)
+![Portfolio Screenshot 4](./public/assets/Images/Screenshots/Port4.png)
+![Portfolio Screenshot 5](./public/assets/Images/Screenshots/Port5.png)
 
 
 
