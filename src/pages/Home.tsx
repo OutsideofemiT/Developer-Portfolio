@@ -26,10 +26,9 @@ return (
 			
 			{/* Gradient Overlay - Smoky to Ash with subtle burnt */}
 			<div className="absolute inset-0 bg-gradient-to-br from-smoky/70 via-ash/50 to-burnt/30"></div>
-
+			
 			<div className="relative z-10 text-center px-6 md:px-12">
 				<h1 className="text-4xl md:text-6xl font-bold text-whitesmoke mb-4">
-					(Still updating...)
 					Carmen Wheeler
 				</h1>
 				<p className="text-xl md:text-2xl text-whitesmoke mb-8 font-light">
@@ -48,6 +47,9 @@ return (
 					>
 						Contact Me
 					</button>
+					<h1 className="text-4xl md:text-6xl font-bold text-whitesmoke mb-4">
+				Portfolio Still Under Construction...Thank you for your patience 
+			</h1>
 				</div>
 			</div>
 		</section>
