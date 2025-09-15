@@ -29,7 +29,6 @@ return (
 			<h1 className="text-4xl md:text-6xl font-bold text-whitesmoke mb-4">
 				Still updating...
 			</h1>
-			<br></br>
 			<div className="relative z-10 text-center px-6 md:px-12">
 				<h1 className="text-4xl md:text-6xl font-bold text-whitesmoke mb-4">
 					Carmen Wheeler
