@@ -65,5 +65,4 @@ This portfolio is intentionally personal and not intended for cloning. However, 
 ---
 
 **Crafted with intention by Carmen Wheeler**  
-Emerging full-stack developer, brand strategist, and digital artist  
-Architect of Smart Gym, Codezilla, and Temple of the Modern Mystic
+c
