@@ -18,7 +18,7 @@ const ProjectsPage: React.FC = () => {
             title: "Codezilla",
             description: "A gamified coding challenge platform where players battle through AI-generated programming questions, face unique bosses with themed difficulties, and compete on global leaderboards. Features full MERN stack with OpenAI integration.",
             image: "/assets/Images/Codezilla/Codezilla_Game_Map2.png",
-            technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Apollo Client", "Node.js", "Express", "Apollo Server", "MongoDB", "JWT", "OpenAI API"],
+            technologies: ["React", "TypeScript", "TailwindCSS", "Apollo Client", "Node.js", "Express", "Apollo Server", "MongoDB", "JWT", "OpenAI API"],
             githubLink: "https://github.com/OutsideofemiT/Codezilla",
             liveLink: "#",
             featured: false

@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+:root {
+  --color-burnt: #CC5500;
+  --color-smoky: #0B0C10;
+  --color-ash: #3C4858;
+  --color-whitesmoke: #F5F5F5;
+  --color-plum: #5D3A58;
+  --color-lime: #C4F500;
+  --color-limeacc: #bcfd4c;
+  --color-gray: #6E6E6E;
+
+  --font-dancing: 'Dancing Script', cursive;
+  --font-great-vibes: 'Great Vibes', cursive;
+  --font-pacifico: 'Pacifico', cursive;
+  --font-satisfy: 'Satisfy', cursive;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--color-smoky);
+  color: var(--color-whitesmoke);
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-burnt: #CC5500;
   --color-smoky: #0B0C10;
