@@ -1,0 +1,11 @@
+{
+  "name": "developer-portfolio-root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix Server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && npm run build --prefix Server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

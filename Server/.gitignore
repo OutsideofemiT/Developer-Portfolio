@@ -3,3 +3,7 @@ app.js
 dist/
 build/
 .env
+*.js
+*.d.ts
+*.d.map
+*.d.ts.map
