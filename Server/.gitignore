@@ -1,9 +1,0 @@
-app.js
-*.js.map
-dist/
-build/
-.env
-*.js
-*.d.ts
-*.d.map
-*.d.ts.map

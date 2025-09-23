@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import useChat from '../hooks/useChat';
+import useChat from '../hooks/useChat.js';
 
 type ChatMessage = {
   id?: string | number;
