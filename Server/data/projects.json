@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+      "name": "Smart Gym",
+      "description": "Smart Gym is a full-stack MERN application for gym management, featuring QR code check-ins, class booking, member and trainer profiles, and a café ordering system with Stripe integration.",
+      "stack": ["React", "Node.js", "MongoDB", "Express.js", "JWT", "Mongoose", "Bcrypt", "CORS", "Nodemailer"],
+      "features": [
+        "User authentication (signup, login)",
+        "Task creation, editing, and deletion",
+        "Real-time task updates across devices",
+        "Search and filter functionality"
+      ],
+      "link": "https://github.com/yourusername/project-alpha"
+    },
+    {
+      "name": "Project Beta",
+      "description": "A mobile application for fitness tracking, including workout logging and progress visualization.",
+      "stack": ["React Native", "Firebase", "Redux"],
+      "features": [
+        "Workout logging and tracking",
+        "Progress charts and analytics",
+        "Goal setting and reminders"
+      ],
+      "link": "https://github.com/yourusername/project-beta"
+    }
+  ],
+  "general_questions": [
+    {
+      "question": "What is your primary tech stack?",
+      "answer": "My primary tech stack includes React, Node.js, Express, and MongoDB for web development, and React Native for mobile applications."
+    },
+    {
+      "question": "Where can I see more of your work?",
+      "answer": "You can find more of my work on my GitHub profile and my personal portfolio website."
+    }
+  ]
+}

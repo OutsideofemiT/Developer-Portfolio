@@ -1,12 +1,14 @@
+// ...existing code...
 import React, { useState } from "react";
-import SCGR1 from "/assets/Images/SmartGym/SGScr1.png";
-import SGMembership1 from "/assets/Images/SmartGym/SGMembership1.png";
-import SGJoin1 from "/assets/Images/SmartGym/SGJoin1.png";
-import QRCheckin from "/assets/Images/SmartGym/QRCheckin.png";
-import Cafe from "/assets/Images/SmartGym/Cafe.png";
-import AdminDash from "/assets/Images/SmartGym/AdminDash.png";
 
-const images = [SCGR1, SGMembership1, SGJoin1, QRCheckin, Cafe, AdminDash];
+const images = [
+  "../assets/Images/SmartGym/SGScr1.png",
+  "../assets/Images/SmartGym/SGMembership1.png",
+  "../assets/Images/SmartGym/SGJoin1.png",
+  "../assets/Images/SmartGym/QRCheckin.png",
+  "../assets/Images/SmartGym/Cafe.png",
+  "../assets/Images/SmartGym/AdminDash.png",
+];
 
 const techStack = [
   "React",
@@ -104,46 +106,45 @@ const FeaturedProject: React.FC = () => {
             </div>
           </div>
 
-          {/* Narrative sections (unchanged, always visible) */}
+          {/* Narrative sections (updated) */}
           <div className="flex-1 min-w-0 w-full max-w-2xl mx-auto flex flex-col justify-center px-2 md:px-8">
-            {/* Example narrative sections */}
-            <section className="mb-8">
+            <section className="mb-6">
               <h3 className="text-2xl font-bold text-lime mb-2">Project Summary</h3>
               <p className="text-whitesmoke/90 text-lg">
-                A comprehensive MERN stack fitness management platform for gyms, featuring QR code check-ins, class booking, analytics, and multi-role access for members, trainers, and admins.
+                Smart Gym is a full-stack MERN application built as a team project during the Dallas Software Developers cohort (July–August 2025). It manages the modern gym experience with features like check-ins, class scheduling, café ordering, and memberships.
               </p>
             </section>
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-lime mb-2">The Challenge</h3>
-              <p className="text-whitesmoke/80">
-                Gyms needed a modern, all-in-one solution to streamline member check-ins, class scheduling, and provide actionable analytics for staff and management.
-              </p>
-            </section>
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-lime mb-2">The Solution &amp; Process</h3>
-              <p className="text-whitesmoke/80 mb-2">
-                I designed and built a full-stack web application using the MERN stack. The process included requirements gathering, wireframing, iterative development, and user testing. Key technical decisions included implementing JWT authentication, role-based dashboards, and integrating analytics and inventory modules.
-              </p>
-              <ul className="list-disc list-inside text-lime/70 text-base space-y-1">
-                <li>React for a responsive, modern UI</li>
-                <li>Node.js/Express backend with RESTful APIs</li>
-                <li>MongoDB for flexible data storage</li>
-                <li>JWT for secure authentication</li>
-                <li>Agile, feedback-driven development</li>
+
+            <section className="mb-6">
+              <h3 className="text-2xl font-bold text-lime mb-2">Team Cohort Contributions (MVP)</h3>
+              <ul className="list-disc list-inside text-whitesmoke/80 space-y-1">
+                <li>Started as frontend-focused: designed layout and UI, built the member portal UI, QR-code check-in/checkout function, and café page.</li>
+                <li>Pivoted to full-stack responsibilities as the team reduced from six to three to ensure core features shipped.</li>
+                <li>Authentication: implemented login tied to seeded users with role-based access (admin, trainer, member).</li>
+                <li>Class Management: built the trainer/admin dashboard to create and manage gym classes.</li>
+                <li>Café Ordering: implemented the user-facing café ordering flow and integrated Stripe payments for checkout.</li>
+                <li>Membership Info: designed and implemented the membership tiers and join options page.</li>
               </ul>
             </section>
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-lime mb-2">Results</h3>
+
+            <section className="mb-6">
+              <h3 className="text-2xl font-bold text-lime mb-2">Post-Cohort Enhancements (Independent Work)</h3>
+              <ul className="list-disc list-inside text-whitesmoke/80 space-y-1">
+                <li>User Signup: replaced seeded-only accounts with a real signup process and updated seeded users for testing.</li>
+                <li>User Model Refactor: migrated user and gym identifiers from email-based keys to MongoDB ObjectIDs for stability.</li>
+                <li>Security Improvements: upgraded password storage to bcrypt with proper salting; retained JWT for sessions.</li>
+                <li>User Profiles: implemented editable member profile management with backend schemas/routes and frontend UI.</li>
+                <li>Stripe Extension: began extending Stripe integration from café purchases to membership signup/payments (in progress).</li>
+              </ul>
+            </section>
+
+            <section className="mb-6">
+              <h3 className="text-2xl font-bold text-lime mb-2">Impact</h3>
               <p className="text-whitesmoke/80">
-                The platform improved check-in efficiency by 40%, reduced class scheduling errors, and provided actionable insights for business growth. The solution was praised by both staff and members for its usability and reliability.
+                This project demonstrates the ability to adapt from frontend specialist to full-stack contributor, take ownership of critical features under shifting team dynamics, and independently refactor and extend the codebase with a focus on security, scalability, and real-world integrations.
               </p>
             </section>
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-lime mb-2">My Role</h3>
-              <p className="text-whitesmoke/80">
-                Full-stack developer: led the project from concept to deployment, handled all frontend and backend development, and coordinated user testing and feedback integration.
-              </p>
-            </section>
+
             <section className="mb-8">
               <h4 className="text-whitesmoke/70 text-base font-semibold mb-2 uppercase tracking-wide">Tech Stack</h4>
               <div className="flex flex-wrap gap-2">
@@ -157,12 +158,7 @@ const FeaturedProject: React.FC = () => {
                 ))}
               </div>
             </section>
-            <section className="mb-8">
-              <h3 className="text-2xl font-bold text-whitesmoke mb-2">What Went Well &amp; What I Learned</h3>
-              <p className="text-whitesmoke/80">
-                I’m proud of the seamless user experience and the robust authentication system. I learned the importance of user feedback in shaping features and the value of clear documentation for future maintainers.
-              </p>
-            </section>
+
             <div className="flex gap-4 mt-4">
               <a
                 href="#"

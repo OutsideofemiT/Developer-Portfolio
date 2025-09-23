@@ -9,7 +9,7 @@ const ProjectsPage: React.FC = () => {
             description: "A comprehensive MERN stack fitness management platform featuring QR code check-ins, class booking system, member/trainer/admin portals, analytics dashboard, and cafe inventory management.",
             image: "/assets/Images/SmartGym/SGScr1.png",
             technologies: ["React", "Node.js", "MongoDB", "Express.js", "JWT", "Mongoose", "Bcrypt", "CORS", "Nodemailer"],
-            githubLink: "https://github.com/OutsideofemiT/Smart-Gym",
+            githubLink: "https://github.com/drosa93/dsd-Smart-Gym-monoRepo.git",
             liveLink: "#",
             featured: true
         },
@@ -170,7 +170,7 @@ const ProjectsPage: React.FC = () => {
                     {/* More Projects Coming Soon */}
                     <div className="text-center mt-20">
                         <div className="bg-gradient-to-br from-smoky/20 to-ash/10 backdrop-blur-sm rounded-2xl border border-whitesmoke/20 p-10 max-w-lg mx-auto hover:border-plum/30 transition-all duration-300">
-                            <div className="text-4xl mb-4">🚀</div>
+                            <div className="text-4xl mb-4"></div>
                             <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-whitesmoke to-plum mb-4">
                                 More Projects Coming Soon!
                             </h3>
