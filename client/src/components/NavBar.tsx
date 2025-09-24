@@ -6,8 +6,8 @@ const NavBar: React.FC = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo/Brand */}
         <a href="#" className="flex items-center space-x-3">
-          <span className="self-center text-2xl whitespace-nowrap text-whitesmoke" style={{ fontFamily: 'var(--font-dancing)' }}>
-            "Turning Ideas into reality"
+          <span className="self-center text-2xl whitespace-nowrap text-whitesmoke" style={{ fontFamily: 'var(--font-sans)' }}>
+            NEW PORTFOLIO LOADING...
           </span>
         </a>
         
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
                 href="#projects" 
                 className="block py-2 px-3 text-whitesmoke rounded-sm hover:bg-ash md:hover:bg-transparent md:hover:text-burnt md:p-0 transition-all"
               >
-                Projects
+                Featured Project
               </a>
             </li>
              <li>

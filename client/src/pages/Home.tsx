@@ -50,9 +50,6 @@ return (
 				
 				</div>
 			</div>
-				<h1 className="text-1xl md:text-1xl font-bold text-whitesmoke mb-4">
-				Portfolio Still Under Construction...Thank you for your patience 
-			</h1>
 		</section>
 		<section id="aboutme">
 			<AboutMe />	
