@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { OpenAI } from 'openai';
-import { chatbotSystemPrompt } from '../utils/systemPrompts';
+import { chatbotSystemPrompt } from '../utils/systemPrompts.js';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
@@ -44,11 +44,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     type ChatMessage = { role: 'system' | 'user' | 'assistant' | 'function'; content: string; name?: string };
 
     const userMessagesRaw: ChatMessage[] = Array.isArray(messages)
-      ? (messages as Array<Record<string, unknown>>).map(it => ({
-          role: (String(it.role) as ChatMessage['role']) || 'user',
-          content: String(it.content ?? ''),
-          name: it.name ? String(it.name) : undefined,
-        }))
+      ? (messages as Array<Record<string, unknown>>).map(it => {
+          const base = {
+            role: (String(it.role) as ChatMessage['role']) || 'user',
+            content: String(it.content ?? ''),
+          };
+          return it.name !== undefined
+            ? { ...base, name: String(it.name) }
+            : base;
+        })
       : message
       ? [{ role: 'user', content: String(message), name: undefined }]
       : [];

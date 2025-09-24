@@ -1,5 +1,11 @@
 import React from 'react';
-import type { ChatMessage } from '../types/chat';
+
+type ChatMessage = {
+  id?: string | number;
+  role?: 'user' | 'assistant' | 'system';
+  content?: string;
+  timestamp?: number | string;
+};
 
 export default function ChatMessages({ messages }: { messages: ChatMessage[] }) {
   return (
