@@ -3,10 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "cd client && npm run build",
-    "preview": "vite preview"
-  },
+  "dev": "cd client && npm run dev",
+  "build": "cd client && npm run build",
+  "preview": "cd client && npm run preview"
+},
+  
   "dependencies": {
     "nodemailer": "^7.0.6",
     "openai": "^4.104.0",
