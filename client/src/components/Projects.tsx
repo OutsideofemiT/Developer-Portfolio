@@ -162,13 +162,13 @@ const FeaturedProject: React.FC = () => {
             <div className="flex gap-4 mt-4">
               <a
                 href="#"
-                className="bg-limeacc text-whitesmoke font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-center hover:bg-plum/80 shadow-md"
+                className="border-2 border-whitesmoke/30 bg-ash text-lime font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-center hover:text-lime hover:bg-whitesmoke/10 shadow-md"
               >
                 Live Demo
               </a>
               <a
                 href="https://github.com/OutsideofemiT/Smart-Gym"
-                className="border-2 border-whitesmoke/30 text-whitesmoke hover:text-plum hover:border-plum/50 font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-center hover:bg-whitesmoke/10 shadow-md"
+                className="border-2 border-whitesmoke/30 text-whitesmoke hover:text-lime hover:border-lime/50 font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-center hover:bg-whitesmoke/10 shadow-md"
               >
                 GitHub
               </a>

@@ -1,7 +1,13 @@
+import fs from 'fs';
+import path from 'path';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { OpenAI } from 'openai';
 import { chatbotSystemPrompt } from '../utils/systemPrompts.js';
 import nodemailer from 'nodemailer';
+
+
+const projectsPath = path.join(process.cwd(), 'utils', 'data', 'projects.json');
+const projects = JSON.parse(fs.readFileSync(projectsPath, 'utf-8'));
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -57,8 +63,26 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       ? [{ role: 'user', content: String(message), name: undefined }]
       : [];
 
+    // Incorporate projects and general questions into the system prompt
+    const projectsPrompt = `Here are some of my projects:\n${projects.projects
+      .map((p: any) => `- ${p.name}: ${p.description}`)
+      .join('\n')}\n`;
+
+    const generalQAPrompt = `Here are some common questions and answers:\n${projects.general_questions
+      .map((q: any) => `Q: ${q.question}\nA: ${q.answer}`)
+      .join('\n')}\n`;
+
+    const systemPrompt = `
+    ${chatbotSystemPrompt} You may share any project links or live URLs provided in the list below if the user asks for them.
+    ${projectsPrompt}
+    ${generalQAPrompt}
+    `;
+
     const payloadMessages: ChatMessage[] = [
-      { role: 'system', content: chatbotSystemPrompt },
+      { 
+        role: 'system', 
+        content: `${chatbotSystemPrompt}\n${projectsPrompt}\n${generalQAPrompt}` 
+      },
       ...userMessagesRaw,
     ];
 

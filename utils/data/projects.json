@@ -2,36 +2,124 @@
   "projects": [
     {
       "name": "Smart Gym",
+      "type": "Full-stack MERN application",
       "description": "Smart Gym is a full-stack MERN application for gym management, featuring QR code check-ins, class booking, member and trainer profiles, and a café ordering system with Stripe integration.",
-      "stack": ["React", "Node.js", "MongoDB", "Express.js", "JWT", "Mongoose", "Bcrypt", "CORS", "Nodemailer"],
-      "features": [
-        "User authentication (signup, login)",
-        "Task creation, editing, and deletion",
-        "Real-time task updates across devices",
-        "Search and filter functionality"
+      "stack": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        "JWT",
+        "Mongoose",
+        "Bcrypt",
+        "CORS",
+        "Nodemailer",
+        "Stripe"
       ],
-      "link": "https://github.com/yourusername/project-alpha"
+      "features": [
+        "QR code check-ins and check-outs",
+        "Membership tiers and subscription flow with Stripe",
+        "Trainer and member profile management",
+        "Class scheduling and booking",
+        "Café ordering system with integrated checkout",
+        "Real-time dashboard updates"
+      ],
+      "link": "https://github.com/drosa93/dsd-Smart-Gym-monoRepo.git"
     },
     {
-      "name": "Project Beta",
-      "description": "A mobile application for fitness tracking, including workout logging and progress visualization.",
-      "stack": ["React Native", "Firebase", "Redux"],
-      "features": [
-        "Workout logging and tracking",
-        "Progress charts and analytics",
-        "Goal setting and reminders"
+      "name": "Codezilla",
+      "type": "Bootcamp Project / Gamified coding platform",
+      "description": "Codezilla is a gamified coding challenge platform that blends gameplay and AI. Players log in, traverse a game map, and face AI-generated coding battles. OpenAI powers quirky minion battles and the final showdown with Codezilla, while accuracy and speed determine leaderboard rankings.",
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "TailwindCSS",
+        "Apollo Client",
+        "Node.js",
+        "Express.js",
+        "Apollo Server",
+        "MongoDB",
+        "JWT",
+        "OpenAI",
+        "Nodemon",
+        "Concurrently",
+        "ESLint",
+        "dotenv"
       ],
-      "link": "https://github.com/yourusername/project-beta"
+      "features": [
+        "AI-generated coding challenges",
+        "Interactive gameplay with a global leaderboard",
+        "User authentication and profiles",
+        "Progress tracking"
+      ],
+      "link": "https://github.com/OutsideofemiT/Codezilla.git"
+    },
+    {
+      "name": "Chaos Coordinator",
+      "type": "Business website / Service",
+      "description": "Chaos Coordinator is a professional home cleaning and organizing service offering residential cleaning, laundry help, organization assistance, errand-running, companion care, home & pet sitting, and specialty cleaning services. This is a live business site (marketing/bookings) rather than an open-source project.",
+      "services": [
+        "Residential cleaning",
+        "Laundry help",
+        "Organization / decluttering",
+        "Errand running",
+        "Companion care",
+        "Home & pet sitting",
+        "Specialty cleaning and pricing information"
+      ],
+      "live_link": "https://chaoscoordinator.netlify.app/",
+      "repository": "Private (business project)"
+    },
+    {
+      "name": "DevUniverse",
+      "type": "Personal dashboard / productivity tool",
+      "description": "DevUniverse is a minimalist ambient developer dashboard built to stay in the background while empowering focused work — combining mantra messaging, real-time note-taking, and lightweight task extraction.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "LocalStorage API"
+      ],
+      "features": [
+        "Mantra welcome screen setting the tone",
+        "Sticky notepad with auto-save",
+        "Detection of `todo:` entries and `::todo` trigger for task modal",
+        "Calm, focused UI designed for minimal distraction"
+      ],
+      "link": "https://github.com/OutsideofemiT/DevUniverse",
+      "deployment": "Static (no backend required; runs client-side)",
+      "notes": "Uses localStorage for persistence; no user accounts or database backend."
     }
   ],
   "general_questions": [
     {
       "question": "What is your primary tech stack?",
-      "answer": "My primary tech stack includes React, Node.js, Express, and MongoDB for web development, and React Native for mobile applications."
+      "answer": "My primary tech stack includes React, Node.js, Express, and MongoDB for full-stack web applications, with additional experience in TypeScript, TailwindCSS, and Stripe integrations."
+    },
+    {
+      "question": "Do you have experience with AI integrations?",
+      "answer": "Yes, I integrated OpenAI into Codezilla to generate real-time coding challenges, blending gameplay with AI-powered assessments."
+    },
+    {
+      "question": "Do you work with payments or e-commerce?",
+      "answer": "Yes, in Smart Gym I implemented Stripe for handling café purchases and membership subscriptions, including checkout flows and receipt handling."
     },
     {
       "question": "Where can I see more of your work?",
-      "answer": "You can find more of my work on my GitHub profile and my personal portfolio website."
+      "answer": "You can explore my projects on my GitHub profile (https://github.com/OutsideofemiT) and on my personal portfolio website."
+    },
+    {
+      "question": "What are your soft skills?",
+      "answer": "I bring strong collaboration, problem-solving, and adaptability skills from working in team-based projects like Codezilla and Smart Gym, where communication and agile workflows were key."
+    },
+    {
+      "question": "What motivates your work?",
+      "answer": "I’m passionate about building applications that combine functionality with user-centered design, and I enjoy blending creativity with problem-solving to deliver meaningful solutions."
+    },
+    {
+      "question": "Do you have any certifications or current studies?",
+      "answer": "Yes, I hold certifications in SEO and Generative Engine Optimization (GEO), and I am currently studying advanced AI integrations and TailwindCSS."
     }
   ]
 }

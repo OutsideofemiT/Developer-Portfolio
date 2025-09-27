@@ -81,8 +81,7 @@ const Skills: React.FC = () => {
 					<p className="text-whitesmoke/80 text-lg mb-6 max-w-2xl mx-auto">
 						Want to see these technologies in action? Explore my complete project portfolio.
 					</p>
-					<a 
-						href="/projects"
+					<a href="/projects"
 						className="inline-block bg-gradient-to-r from-plum to-plum/80 hover:from-plum/90 hover:to-plum text-whitesmoke font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-plum/25"
 					>
 						View All Projects

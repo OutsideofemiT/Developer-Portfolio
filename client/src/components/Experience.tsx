@@ -11,7 +11,7 @@ const Experience: React.FC = () => {
 					My professional journey and accomplishments.
 				</p>
 			</div>
-			<div className="grid-cols-1 bg-burnt/5">
+			<div className="flex flex-row">
 			<p className="text-1xl font-light text-left mb-4 text-whitesmoke">
 				Before transitioning into web development, I spent nearly a decade in customer service, fraud investigation, and onboarding coordination—
 				roles that demanded empathy, precision, and systems thinking.
