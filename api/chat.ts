@@ -4,6 +4,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { OpenAI } from 'openai';
 import { chatbotSystemPrompt } from '../utils/systemPrompts.js';
 import nodemailer from 'nodemailer';
+import { emailPrompts } from '../utils/emailPrompts.js';
 
 
 const projectsPath = path.join(process.cwd(), 'utils', 'data', 'projects.json');
@@ -72,12 +73,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       .map((q: any) => `Q: ${q.question}\nA: ${q.answer}`)
       .join('\n')}\n`;
 
-    const systemPrompt = `
+    const systemPrompts = `
     ${chatbotSystemPrompt} You may share any project links or live URLs provided in the list below if the user asks for them.
     ${projectsPrompt}
     ${generalQAPrompt}
     `;
-
+    
     const payloadMessages: ChatMessage[] = [
       { 
         role: 'system', 
@@ -98,14 +99,39 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (process.env.ALLOW_EMAILS === 'true' && email) {
       try {
         const to = emailTo ?? process.env.DEFAULT_EMAIL_TO;
-        const info = await transporter.sendMail({
-          from: process.env.EMAIL_FROM,
-          to,
-          subject: 'Chatbot reply',
-          text: reply,
-          html: `<pre style="white-space:pre-wrap">${reply}</pre>`,
-        });
-        console.log('Email sent', info.messageId);
+
+        const userName = req.body.userName ?? 'Anonymous';
+        const userCompany = req.body.userCompany ?? 'N/A';
+        const userEmail = req.body.userEmail;
+        const userMessage = req.body.userMessage ?? '';
+
+      
+    if (!userEmail) {
+      console.warn('No user email provided, skipping email send');
+    } else {
+      const emailSubject = `Message from Portfolio Chatbot`;
+
+      const emailText = `
+      Name: ${userName}
+      Company: ${userCompany}
+      Wmail: ${userEmail}
+
+      Message:
+      ${userMessage}
+        `;
+
+          const emailHTML = `<pre style="white-space:pre-wrap">${emailText}</pre>`;
+
+          const info = await transporter.sendMail({
+            from: process.env.EMAIL_FROM,
+            to,
+            subject: emailSubject,
+            text: emailText,
+            html: emailHTML,
+          });
+
+          console.log('Email sent', info.messageId);
+        }
       } catch (mailErr: any) {
         console.error('Failed to send email:', mailErr?.message ?? mailErr);
       }
@@ -114,6 +140,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.status(200).json({ reply });
   } catch (err) {
     console.error('Error in /api/chat:', err);
-    res.status(500).json({ error: 'Server error' });
+      res.status(500).json({ error: 'Server error' });
+    }
   }
-}

@@ -1,4 +1,4 @@
-export const emailPrompts = [
+export const emailPrompts: string[] = [
 	"Would you like to contact Carmen via Email?",
 	"Please provide your Name.",
 	"Please provide your Company Name",

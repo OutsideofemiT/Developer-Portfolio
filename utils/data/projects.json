@@ -120,6 +120,10 @@
     {
       "question": "Do you have any certifications or current studies?",
       "answer": "Yes, I hold certifications in SEO and Generative Engine Optimization (GEO), and I am currently studying advanced AI integrations and TailwindCSS."
-    }
+    },
+  {
+      "question": "What is your Linkedin?",
+      "answer": "You can reach me at (https://www.linkedin.com/in/carmendwheeler/)."
+  }
   ]
 }

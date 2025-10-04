@@ -1,5 +1,5 @@
 // filepath: src/prompts/fallbackQuestions.ts
-export const fallbackQuestions = [
+export const string = [
   "How can I contact Carmen?",
   "What projects has Carmen worked on?",
   "What technologies does Carmen use?",
