@@ -62,7 +62,7 @@ body {
   color: var(--color-whitesmoke);
   font-family: 'Inter', sans-serif;
 }
-/* ...existing code... */
+
 
 /* hide native scrollbar but keep scrolling functionality */
 .no-scrollbar {
@@ -74,6 +74,26 @@ body {
 /* smooth scroll when auto-scrolling */
 .no-scrollbar { scroll-behavior: smooth; }
 
+/* Custom scrollbar for chatbot and any .custom-scroll element */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-limeacc) transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-limeacc);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #b6f542;
+}
 /* keep message animation and typing cursor as before */
 @keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
 .msg-animate { animation: fadeUp .28s ease both; }

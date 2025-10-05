@@ -63,10 +63,10 @@ const NavBar: React.FC = () => {
             </li>
              <li>
               <a 
-                href="#experience" 
+                href="#credentials" 
                 className="block py-2 px-3 text-whitesmoke rounded-sm hover:bg-ash md:hover:bg-transparent md:hover:text-burnt md:p-0 transition-all"
               >
-                Experience
+                Experience/Credentials
               </a>
             </li>
             <li>

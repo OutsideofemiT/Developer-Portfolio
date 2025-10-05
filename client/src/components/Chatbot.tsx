@@ -18,6 +18,26 @@ const emailPrompts = [
 
 const signature = "—Carmen's Assistant";
 
+type TypingMessageProps = {
+  text: string;
+  speed?: number;
+  [key: string]: any;
+};
+
+function TypingMessage({ text, speed = 20, ...props }: TypingMessageProps) {
+  const [displayed, setDisplayed] = useState('');
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayed(text.slice(0, i + 1));
+      i++;
+      if (i === text.length) clearInterval(interval);
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+  return <span {...props}>{displayed}</span>;
+}
+
 const Chatbot: React.FC = () => {
   const {
     messages: rawMessages = [],
@@ -39,6 +59,13 @@ const Chatbot: React.FC = () => {
     email?: string;
     message?: string;
   }>({});
+  const [editMode, setEditMode] = useState<null | 'ask' | 'edit'>(null);
+
+  // New states for remembering user info and "anything else" flow
+  const [userInfo, setUserInfo] = useState<{ name?: string; company?: string; email?: string }>({});
+  const [awaitingAnythingElse, setAwaitingAnythingElse] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const messagesRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -46,7 +73,57 @@ const Chatbot: React.FC = () => {
     messagesRef.current?.scrollTo({ top: messagesRef.current.scrollHeight, behavior: 'smooth' });
   }, [rawMessages]);
 
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   const handleSend = async (text: string) => {
+    // Handle "anything else" prompt
+    if (awaitingAnythingElse) {
+      setAwaitingAnythingElse(false);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      setInput('');
+      if (/^y(es)?$/i.test(text.trim())) {
+        // User wants to send another message, only ask for the message
+        setEmailStep(3); // 3 = message step
+        setEmailData({ ...userInfo });
+        sendMessage("What message would you like to send to Carmen?", { role: 'assistant', localOnly: true });
+      } else {
+        // Thank user by name
+        sendMessage(
+          `Thank you${userInfo.name ? `, ${userInfo.name}` : ""}! If you need anything else, just let me know. ${signature}`,
+          { role: 'assistant', localOnly: true }
+        );
+      }
+      return;
+    }
+
+    // Handle edit flow after user says "no" at confirmation
+    if (editMode === 'ask') {
+      setInput('');
+      if (/^y(es)?$/i.test(text.trim())) {
+        setEditMode('edit');
+        sendMessage("Please enter your new message.", { role: 'assistant', localOnly: true });
+      } else {
+        setEditMode(null);
+        setEmailStep(null);
+        setEmailData({});
+        sendMessage("Message cancelled. If you want to try again, type 'contact'.", { role: 'assistant', localOnly: true });
+      }
+      return;
+    }
+
+    if (editMode === 'edit') {
+      setInput('');
+      setEmailData({ ...emailData, message: text });
+      setEditMode(null);
+      setEmailStep(4); // Go back to confirmation step
+      sendMessage(`Are you ready to send your message? (yes/no)`, { role: 'assistant', localOnly: true });
+      return;
+    }
+
     if (emailStep !== null) {
       const nextData = { ...emailData };
       if (emailStep === 0) nextData.name = text;
@@ -59,8 +136,14 @@ const Chatbot: React.FC = () => {
 
       // Confirmation step
       if (emailStep === 4) {
+        setInput('');
         if (/^y(es)?$/i.test(text.trim())) {
-          // User confirmed, send email
+          // Save user info for session
+          setUserInfo({
+            name: nextData.name,
+            company: nextData.company,
+            email: nextData.email,
+          });
           setEmailData({});
           setEmailStep(null);
           await fetch('/api/chat', {
@@ -75,14 +158,22 @@ const Chatbot: React.FC = () => {
             }),
           });
           sendMessage(`Thank you, your message has been sent! ${signature}`, { role: 'assistant', localOnly: true });
-          sendMessage("Is there anything else I can assist you with today?", { role: 'assistant', localOnly: true });
+          sendMessage("Is there anything else I can assist you with today? (yes/no)", { role: 'assistant', localOnly: true });
+          setAwaitingAnythingElse(true);
+          // Start timeout for auto-thank
+          if (timeoutRef.current) clearTimeout(timeoutRef.current);
+          timeoutRef.current = setTimeout(() => {
+            setAwaitingAnythingElse(false);
+            sendMessage(
+              `Thank you${nextData.name ? `, ${nextData.name}` : ""}! If you need anything else, just let me know. ${signature}`,
+              { role: 'assistant', localOnly: true }
+            );
+          }, 30000); // 30 seconds
         } else {
-          // User said no, cancel or restart
-          setEmailStep(null);
-          setEmailData({});
-          sendMessage("Message cancelled. If you want to try again, type 'contact'.", { role: 'assistant', localOnly: true });
+          // User said no, ask if they want to edit
+          setEditMode('ask');
+          sendMessage("Would you like to edit your message? (yes/no)", { role: 'assistant', localOnly: true });
         }
-        setInput('');
         return;
       }
 
@@ -98,10 +189,18 @@ const Chatbot: React.FC = () => {
 
     // Detect "contact" or "send a message"
     if (/contact|send.*message/i.test(text)) {
-      setEmailStep(0);
-      setEmailData({});
-      sendMessage(text, { role: 'user', localOnly: true });
-      sendMessage(emailPrompts[0], { role: 'assistant', localOnly: true });
+      // If userInfo exists, skip to message step
+      if (userInfo.name && userInfo.company && userInfo.email) {
+        setEmailStep(3);
+        setEmailData({ ...userInfo });
+        sendMessage(text, { role: 'user', localOnly: true });
+        sendMessage("What message would you like to send to Carmen?", { role: 'assistant', localOnly: true });
+      } else {
+        setEmailStep(0);
+        setEmailData({});
+        sendMessage(text, { role: 'user', localOnly: true });
+        sendMessage(emailPrompts[0], { role: 'assistant', localOnly: true });
+      }
       setInput('');
       return;
     }
@@ -133,8 +232,9 @@ const Chatbot: React.FC = () => {
       >
         {rawMessages.length === 0 && (
           <div className="text-sm text-lime-300">
-            Hello, I am Stellar, Carmen's portfolio assistant. Would you like to ask a question about my work, or send me a message directly?
-            Just type your question or say 'contact' to send a message.
+            <TypingMessage text={
+              "Hello, I am Stellar, Carmen's portfolio assistant. Would you like to ask a question about my work, or send me a message directly? Just type your question or say 'contact' to send a message."
+            } />
           </div>
         )}
 

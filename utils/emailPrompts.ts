@@ -4,6 +4,7 @@ export const emailPrompts: string[] = [
 	"Please provide your Company Name",
 	"Please provide your email address.",
 	"Please enter the message for the body of the email",
+	"Your message is being sent",
 	"Thank you, your email has been sent",
 ]
 

@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import Experience from "../components/Experience";
+import Credentials from "../components/Credentials";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -54,15 +54,16 @@ return (
 		<section id="aboutme">
 			<AboutMe />	
 		</section>
+		<section id="credentials">
+			<Credentials />
+		</section>
 		<section id="skills">
 			<Skills />
 		</section>
 		<section id="projects">
 			<Projects />
 		</section>
-		<section id="experience">
-			<Experience />
-		</section>
+		
 		<section id="contact">
 			<Contact />
 		</section>
