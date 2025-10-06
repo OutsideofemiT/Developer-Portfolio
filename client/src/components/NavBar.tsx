@@ -49,6 +49,7 @@ const NavBar: React.FC = () => {
               <a 
                 href="#skills" 
                 className="block py-2 px-3 text-whitesmoke rounded-sm hover:bg-ash md:hover:bg-transparent md:hover:text-burnt md:p-0 transition-all"
+                aria-current="page"
               >
                 Skills
               </a>
@@ -57,6 +58,7 @@ const NavBar: React.FC = () => {
               <a 
                 href="#projects" 
                 className="block py-2 px-3 text-whitesmoke rounded-sm hover:bg-ash md:hover:bg-transparent md:hover:text-burnt md:p-0 transition-all"
+                aria-current="page"
               >
                 Featured Project
               </a>
@@ -65,6 +67,7 @@ const NavBar: React.FC = () => {
               <a 
                 href="#credentials" 
                 className="block py-2 px-3 text-whitesmoke rounded-sm hover:bg-ash md:hover:bg-transparent md:hover:text-burnt md:p-0 transition-all"
+                aria-current="page"
               >
                 Experience/Credentials
               </a>
@@ -73,6 +76,7 @@ const NavBar: React.FC = () => {
               <a 
                 href="#contact" 
                 className="block py-2 px-3 text-whitesmoke rounded-sm hover:bg-ash md:hover:bg-transparent md:hover:text-burnt md:p-0 transition-all"
+                aria-current="page"              
               >
                 Contact
               </a>
