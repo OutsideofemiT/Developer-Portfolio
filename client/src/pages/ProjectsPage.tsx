@@ -18,7 +18,7 @@ const ProjectsPage: React.FC = () => {
             title: "Codezilla",
             description: "A gamified coding challenge platform where players battle through AI-generated programming questions, face unique bosses with themed difficulties, and compete on global leaderboards. Features full MERN stack with OpenAI integration.",
             image: "/assets/Images/Codezilla/Codezilla_Game_Map2.png",
-            technologies: ["React", "TypeScript", "TailwindCSS", "Apollo Client", "Node.js", "Express", "Apollo Server", "MongoDB", "JWT", "OpenAI API"],
+            technologies: ["React", "TypeScript", "TailwindCSS", "Apollo Client/Server", "Node.js", "Express", "MongoDB", "JWT", "OpenAI API"],
             githubLink: "https://github.com/OutsideofemiT/Codezilla",
             liveLink: "#",
             featured: false
@@ -38,7 +38,7 @@ const ProjectsPage: React.FC = () => {
             title: "DevUniverse",
             description: "A cosmic command center for developers featuring a minimalist dashboard with persistent note-taking, automatic todo extraction, customizable resource links, and a mantra-driven interface for focused productivity.",
             image: "/assets/Images/DevUniverse/DevUniverse.png",
-            technologies: ["HTML5", "CSS3", "Vanilla JavaScript", "Local Storage API", "Modular JS", "DOM Manipulation"],
+            technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage API", "Modular JS", "DOM Manipulation"],
             githubLink: "https://github.com/OutsideofemiT/DevUniverse",
             liveLink: "#",
             featured: false
