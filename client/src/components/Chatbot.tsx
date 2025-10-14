@@ -233,7 +233,7 @@ const Chatbot: React.FC = () => {
         {rawMessages.length === 0 && (
           <div className="text-sm text-lime-300">
             <TypingMessage text={
-              "Hello, I am Stellar, Carmen's portfolio assistant. Would you like to ask a question about my work, or send me a message directly? Just type your question or say 'contact' to send a message."
+              "Hello, I am Stellar, Carmen's portfolio assistant. Would you like to ask a question about my work, or send me a message directly? Just type your question or type 'contact' to send a message."
             } />
           </div>
         )}
