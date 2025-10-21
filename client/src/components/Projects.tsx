@@ -161,7 +161,7 @@ const FeaturedProject: React.FC = () => {
 
             <div className="flex gap-4 mt-4">
               <a
-                href="#"
+                href="https://smart-gym-jxxx.onrender.com"
                 className="border-2 border-whitesmoke/30 bg-ash text-lime font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-center hover:text-lime hover:bg-whitesmoke/10 shadow-md"
               >
                 Live Demo

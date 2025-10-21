@@ -16,7 +16,7 @@ const emailPrompts = [
   "Are you ready to send your message? (yes/no)"
 ];
 
-const signature = "—Carmen's Assistant";
+const signature = "—Stellar";
 
 type TypingMessageProps = {
   text: string;
